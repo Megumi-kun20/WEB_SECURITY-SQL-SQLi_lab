@@ -1,0 +1,25 @@
+                SQL INJECTION REPORT
+ testing a vulnerable web application (PORTSWIGGER LABS) ;
+1.The application fails to properly sanitize user-supplied input
+ before incorporating it into an SQL query.
+ 
+2. this allows an attacker to manipulate the WHERE clause 
+and retrieve data that should remain hidden.
+
+                     EVIDENCE;
+A.SCREENSHOT 1: shows a normal website with all released products
+ 
+B.SCREENSHOT 2: shows all released products in website 
+
+C.SCREENSHOT 3:  ' OR 1=1 --  The payload modifies the SQL query 
+so that the WHERE condition always evaluates to TRUE.
+ 
+EXPLANATION: with the ' OR 1=1 -- makes all products to appear
+which means that The application now displays hidden and unreleased products, 
+confirming that SQL injection exists.
+   this allows an attacker to retrieve hidden data and access unreleased products.
+ 
+ 
+   
+					 
+		
